@@ -5,7 +5,6 @@ import {
   gridPageSelector,
   useGridApiContext,
   useGridSelector,
-  GridValidRowModel
 } from '@mui/x-data-grid';
 import { Theme, styled } from '@mui/material/styles';
 import Pagination from '@mui/material/Pagination';

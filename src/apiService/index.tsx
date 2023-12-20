@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiService = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL ? `${process.env.REACT_APP_BASE_URL}/api` : '/api',
+  baseURL: process.env.REACT_APP_BASE_URL ? `${process.env.REACT_APP_BASE_URL}` : '/api',
   timeout: 1000,
   headers: { 'Content-Type': 'application/json' },
 });
