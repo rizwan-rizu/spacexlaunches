@@ -1,27 +1,27 @@
 import { apiService } from "../../apiService"
 import { iRocketsProps } from "./interface"
 
-export const getAllRockets = async (
+export const getAllLauches = async (
   hasUnMounted: Boolean,
-  setRockets: React.Dispatch<React.SetStateAction<iRocketsProps[]>>,
+  setLauches: React.Dispatch<React.SetStateAction<iRocketsProps[]>>,
   setSnackbar?: React.Dispatch<React.SetStateAction<{ open: boolean, message: string }>>
 ) => {
   try {
-    const res = await apiService.get(`/rockets`)
+    const res = await apiService.get(`/launches/past`)
     if (!hasUnMounted) {
       if (res.status === 200) {
-        setRockets(res.data)
+        setLauches(res.data.reverse())
       }
-      else setSnackbar && setSnackbar({ open: true, message: "Failed to fetch rockets" })
+      else setSnackbar && setSnackbar({ open: true, message: "Failed to fetch lauches" })
     }
   } catch (error) {
     if (!hasUnMounted) {
-      setSnackbar && setSnackbar({ open: true, message: "Failed to fetch rockets" })
+      setSnackbar && setSnackbar({ open: true, message: "Failed to fetch lauches" })
     }
   }
 }
 
-export const getSpecificRocket = async (
+export const getSpecificLaucnch = async (
   hasUnMounted: Boolean,
   rocketId: string | undefined,
   setRocket: React.Dispatch<React.SetStateAction<any>>,

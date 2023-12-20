@@ -1,4 +1,4 @@
-import { Box, Divider, Stack, Typography } from "@mui/material"
+import { Box, Divider, Link, Stack, Typography } from "@mui/material"
 import { useEffect, useState } from "react"
 import { getSpecificRocket } from "./api"
 import { useParams } from "react-router-dom"
@@ -44,6 +44,10 @@ const RocketView = () => {
           {stack("Height", `${rocket.height?.meters} meter | ${rocket.height?.feet} feet`)}
           {stack("Diameter", `${rocket?.diameter?.meters} meter | ${rocket?.diameter?.feet} feet`)}
           {stack("Booesters", rocket?.boosters)}
+          <Typography pt={2} variant="body1">
+            Checkout this wikipedia link for more information about this rocket.
+          </Typography>
+          <Link href={rocket?.wikipedia as string} target="_blank" variant="body2">{rocket?.wikipedia}</Link>
         </Box>
         <Typography py={2} variant="h6" color="primary">Engines</Typography>
         <Box pl={2}>

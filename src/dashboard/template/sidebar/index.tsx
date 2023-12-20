@@ -1,6 +1,6 @@
 import { useContext, Fragment } from "react"
 import { Box, List, ListItem, Typography, Tooltip, IconButton, ListItemButton } from "@mui/material"
-import { AccountCircle, Menu, Dashboard, Rocket } from "@mui/icons-material"
+import { Menu, Rocket, RocketLaunch } from "@mui/icons-material"
 import { useNavigate } from "react-router-dom"
 import { StoreContext } from "../../../store"
 import pallete from "../../../common/colors"
@@ -90,8 +90,7 @@ const renderListItem = (item: iListItemProps, navigate: any) => (
 )
 
 const sidebarMenuList = [
-  { name: 'Dashboard', icon: <Dashboard />, to: '/', routeInitial: "", visibleTo: [roles.ALL] },
-  { name: 'Launches', icon: <AccountCircle />, to: '/launches', routeInitial: "launches", visibleTo: [roles.ALL] },
+  { name: 'Launches', icon: <RocketLaunch />, to: '/', routeInitial: "", visibleTo: [roles.ALL] },
   { name: 'Rockets', icon: <Rocket />, to: '/rockets', routeInitial: "rockets", visibleTo: [roles.ALL] },
 ]
 
