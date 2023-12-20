@@ -1,8 +1,7 @@
 import { Box, Typography } from '@mui/material'
-
 import { useNavigate } from 'react-router-dom'
 import pallete from "./colors"
-import { ReactComponent as NotFoundIllustration } from '../../assets/images/not-found.svg'
+import { ReactComponent as NotFoundIllustration } from '../assets/images/not-found.svg'
 import MuiButton from './button'
 import { CenteredContainer } from './styledComponents'
 

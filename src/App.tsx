@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Landing from './dashboard/landing';
+import { ThemeProvider } from '@mui/material/styles'
+import NotFound from './common/notFound';
 import './App.css';
+import { appTheme } from "./appTheme";
+import Rockets from "./dashboard/rockets";
+import RocketView from "./dashboard/rockets/rocketView";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+
+  <ThemeProvider theme={appTheme}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/rockets" element={<Rockets />} />
+        <Route path="/rockets/:rocketId" element={<RocketView />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  </ThemeProvider>
+);
 
 export default App;
