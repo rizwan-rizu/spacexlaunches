@@ -1,6 +1,6 @@
 import { Box, Divider, Link, Stack, Typography } from "@mui/material"
 import { useEffect, useState } from "react"
-import { getSpecificRocket } from "./api"
+import { getSpecificLaunchPad } from "./api"
 import { useParams } from "react-router-dom"
 import Dashboard from ".."
 import pallete from "../../common/colors"
@@ -8,18 +8,18 @@ import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 import NotificationSnackbar from "../../common/snackbar"
 
-const RocketView = () => {
-  const { rocketId } = useParams()
+const LaunchPadView = () => {
+  const { launchPadId } = useParams()
   const [rocket, setRocket] = useState<{ [key: string]: any }>({})
   const [snackbar, setSnackbar] = useState<{ open: boolean, message: string }>({ open: false, message: '' })
 
   useEffect(() => {
     let hasUnMounted = false
-    getSpecificRocket(hasUnMounted, rocketId, setRocket, setSnackbar)
+    getSpecificLaunchPad(hasUnMounted, launchPadId, setRocket, setSnackbar)
     return (() => {
       hasUnMounted = true
     })
-  }, [rocketId])
+  }, [launchPadId])
 
   const stack = (label: string, value: string | number) => (
     <Stack direction="row" spacing={5}>
@@ -81,4 +81,4 @@ const RocketView = () => {
   return <Dashboard body={body()} />
 }
 
-export default RocketView
+export default LaunchPadView

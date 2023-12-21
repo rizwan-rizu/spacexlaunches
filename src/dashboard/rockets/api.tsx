@@ -4,7 +4,7 @@ import { iRocketsProps } from "./interface"
 export const getAllRockets = async (
   hasUnMounted: Boolean,
   setRockets: React.Dispatch<React.SetStateAction<iRocketsProps[]>>,
-  setSnackbar: React.Dispatch<React.SetStateAction<{ open: boolean, message: string }>>
+  setSnackbar?: React.Dispatch<React.SetStateAction<{ open: boolean, message: string }>>
 ) => {
   try {
     const res = await apiService.get(`/rockets`)
@@ -12,11 +12,11 @@ export const getAllRockets = async (
       if (res.status === 200) {
         setRockets(res.data)
       }
-      else setSnackbar({ open: true, message: "Failed to fetch rockets" })
+      else setSnackbar && setSnackbar({ open: true, message: "Failed to fetch rockets" })
     }
   } catch (error) {
     if (!hasUnMounted) {
-      setSnackbar({ open: true, message: "Failed to fetch rockets" })
+      setSnackbar && setSnackbar({ open: true, message: "Failed to fetch rockets" })
     }
   }
 }
