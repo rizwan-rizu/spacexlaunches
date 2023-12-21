@@ -1,42 +1,42 @@
 import { apiService } from "../../apiService"
-import { iRocketsProps } from "./interface"
+import { iLaunchProps } from "./interface"
 
-export const getAllLauches = async (
+export const getAllLaunches = async (
   hasUnMounted: Boolean,
-  setLauches: React.Dispatch<React.SetStateAction<iRocketsProps[]>>,
+  setLaunch: React.Dispatch<React.SetStateAction<iLaunchProps[]>>,
   setSnackbar?: React.Dispatch<React.SetStateAction<{ open: boolean, message: string }>>
 ) => {
   try {
     const res = await apiService.get(`/launches/past`)
     if (!hasUnMounted) {
       if (res.status === 200) {
-        setLauches(res.data.reverse())
+        setLaunch(res.data.reverse())
       }
-      else setSnackbar && setSnackbar({ open: true, message: "Failed to fetch lauches" })
+      else setSnackbar && setSnackbar({ open: true, message: "Failed to fetch launches" })
     }
   } catch (error) {
     if (!hasUnMounted) {
-      setSnackbar && setSnackbar({ open: true, message: "Failed to fetch lauches" })
+      setSnackbar && setSnackbar({ open: true, message: "Failed to fetch launches" })
     }
   }
 }
 
-export const getSpecificLaucnch = async (
+export const getSpecificLaunch = async (
   hasUnMounted: Boolean,
-  rocketId: string | undefined,
-  setRocket: React.Dispatch<React.SetStateAction<any>>,
+  launchId: string | undefined,
+  setLaunch: React.Dispatch<React.SetStateAction<iLaunchProps>>,
   setSnackbar: React.Dispatch<React.SetStateAction<{ open: boolean, message: string }>>
 ) => {
   try {
-    const res = await apiService.get(`/rockets/${rocketId}`)
+    const res = await apiService.get(`/launches/${launchId}`)
     if (!hasUnMounted) {
       console.log(res.data)
-      if (res.status === 200) setRocket(res.data)
-      else setSnackbar({ open: true, message: "Failed to fetch rocket" })
+      if (res.status === 200) setLaunch(res.data)
+      else setSnackbar({ open: true, message: "Failed to fetch launch" })
     }
   } catch (error) {
     if (!hasUnMounted) {
-      setSnackbar({ open: true, message: "Failed to fetch rocket" })
+      setSnackbar({ open: true, message: "Failed to fetch launch" })
     }
   }
 }

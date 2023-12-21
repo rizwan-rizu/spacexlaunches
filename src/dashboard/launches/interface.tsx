@@ -1,71 +1,49 @@
-interface iHeight {
-  meters: number,
-  feet: number
-}
-
-interface iDiameter {
-  meters: number,
-  feet: number
-}
-
-interface iMass {
-  kg: number,
-  lb: number
-}
-
-export interface iRocketsProps {
-  height: iHeight,
-  diameter: iDiameter,
-  mass: iMass,
-  first_stage: {
-    thrust_sea_level: object,
-    thrust_vacuum: object,
-    reusable: boolean,
-    engines: number,
-    fuel_amount_tons: number,
-    burn_time_sec: number
+export interface iLaunchProps {
+  "fairings": {
+    "reused": boolean,
+    "recovery_attempt": boolean,
+    "recovered": boolean,
+    "ships": any[]
   },
-  second_stage: {
-    thrust: object,
-    payloads: {
-      composite_fairing: {
-        height: iHeight,
-        diameter: iDiameter,
-      },
-      option_1: string,
+  "links": {
+    "patch": {
+      "small": string,
+      "large": string
     },
-    reusable: boolean,
-    engines: number,
-    fuel_amount_tons: number,
-    burn_time_sec: number
+    "reddit": object,
+    "flickr": {
+      "small": string[],
+      "original": string[]
+    },
+    "presskit": string,
+    "webcast": string,
+    "youtube_id": string,
+    "article": string,
+    "wikipedia": string
   },
-  engines: {
-    [key: string]: string | number
-  },
-  landing_legs: {
-    number: number,
-    material: null
-  },
-  payload_weights: [
-    {
-      id: string,
-      name: string,
-      kg: number,
-      lb: number
-    }
-  ],
-  flickr_images: string[],
-  name: string,
-  type: string,
-  active: false,
-  stages: number,
-  boosters: number,
-  cost_per_launch: number,
-  success_rate_pct: number,
-  first_flight: string,
-  country: string,
-  company: string,
-  wikipedia: string,
-  description: string,
-  id: string
+  "static_fire_date_utc": string,
+  "static_fire_date_unix": number,
+  "net": boolean,
+  "window": number,
+  "rocket": string,
+  "success": boolean,
+  "failures": object[],
+  "details": string,
+  "crew": string[],
+  "ships": string[],
+  "capsules": string[],
+  "payloads": string[],
+  "launchpad": string,
+  "flight_number": 1,
+  "name": string,
+  "date_utc": string,
+  "date_unix": 1143239400,
+  "date_local": string,
+  "date_precision": string,
+  "upcoming": boolean,
+  "cores": object[],
+  "auto_update": boolean,
+  "tbd": boolean,
+  "launch_library_id": string,
+  "id": string
 }

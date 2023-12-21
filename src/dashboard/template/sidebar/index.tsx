@@ -1,13 +1,13 @@
 import { useContext, Fragment } from "react"
 import { Box, List, ListItem, Typography, Tooltip, IconButton, ListItemButton } from "@mui/material"
-import { Menu, Rocket, RocketLaunch } from "@mui/icons-material"
+import { FlightTakeoff, Menu, Rocket, RocketLaunch, SatelliteAlt } from "@mui/icons-material"
 import { useNavigate } from "react-router-dom"
 import { StoreContext } from "../../../store"
 import pallete from "../../../common/colors"
 import { styled } from '@mui/system'
-import { roles } from "../../../common/helper"
+import { roles } from "../../../utility"
 
-interface iListItemProps {
+export interface iListItemProps {
   name: string
   icon: HTMLElement
   to: string
@@ -78,9 +78,10 @@ const SideNav = styled(Box)<{ toggle: boolean }>(({ toggle }) => ({
     },
   },
 }));
+
 const renderListItem = (item: iListItemProps, navigate: any) => (
   <ListItem key={item.name} className="list-item" onClick={() => item.to && navigate(item.to)} disablePadding>
-    <ListItemButton selected={window.location.pathname.includes(item.routeInitial)}>
+    <ListItemButton selected={window.location.pathname === item.to || (window.location.pathname.includes(item.routeInitial) && (item.routeInitial !== "" || window.location.pathname.includes('launch/')))}>
       <>
         {item.icon}
         <Typography sx={{ fontSize: 14, paddingLeft: 3 }} color="secondary.100" variant="body2">{item.name}</Typography>
@@ -89,9 +90,11 @@ const renderListItem = (item: iListItemProps, navigate: any) => (
   </ListItem>
 )
 
-const sidebarMenuList = [
+export const sidebarMenuList = [
   { name: 'Launches', icon: <RocketLaunch />, to: '/', routeInitial: "", visibleTo: [roles.ALL] },
   { name: 'Rockets', icon: <Rocket />, to: '/rockets', routeInitial: "rockets", visibleTo: [roles.ALL] },
+  { name: 'Launch Pads', icon: <FlightTakeoff />, to: '/launch-pad', routeInitial: "launch-pad", visibleTo: [roles.ALL] },
+  { name: 'Starlink', icon: <SatelliteAlt />, to: '/starlink', routeInitial: "starlink", visibleTo: [roles.ALL] },
 ]
 
 export default Sidebar

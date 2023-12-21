@@ -5,3 +5,5 @@ export const removeStorageItem = (name: string) => localStorage.removeItem(name)
 export enum roles {
     ALL = "ALL",
 }
+
+export const capitalizeFirstLetter = (text: string) => text.toLowerCase().charAt(0).toUpperCase() + text.toLowerCase().slice(1);

@@ -1,7 +1,8 @@
 // colors variable module
 const colors = {
   primary: "#064073",
-  secondary: "#B0BAC9",
+  // secondary: "#B0BAC9",
+  secondary: "#d9d9d9",
   tertiary: "#FD9C39",
   quaternary: "#F7F9FC",
   white: "#ffffff",
