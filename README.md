@@ -34,10 +34,11 @@ npm (Node Package Manager)
 - Implemented state management using the context api without any external library installation.
 - For the purpose of code reusability, common components were created to be called whenever necessary.
 
-## Things react application should have but not implemented currently due to limited time
+## Things application should have but not implemented currently due to limited time
 - Error Boundaries for error handling in React to catch JavaScript errors occurring anywhere in their child component tree
 - Unit testing
 - Setting up ESLint for improved code quality
+- Implementation of infinite scrolling for the launches, fetching additional results as the user scrolls down. (couldn't implement it as the spacex api doesn't have the pagination implemented)
 
 ## Design Choice
 This application was designed and developed to appeal to users who prefer the dashboard layout with navigation on the left as well as those who prefer the Top Nav layout. (screenshots attached below)
