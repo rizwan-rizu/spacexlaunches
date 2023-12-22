@@ -1,5 +1,5 @@
 import { getAllLaunchPads } from "../dashboard/launchPads/api"
-import { getAllLaunches } from "../dashboard/launches/api"
+import { getAllLaunches, getUpcomingLaunches } from "../dashboard/launches/api"
 import { getAllRockets } from "../dashboard/rockets/api"
 
 export const persistStore = async (
@@ -7,10 +7,12 @@ export const persistStore = async (
 	sidebar: { [key: string]: any },
 	launch: { [key: string]: any },
 	launchPad: { [key: string]: any },
+	upcomingLaunch: { [key: string]: any },
 ) => {
 	getAllLaunches(false, launch.setLaunches)
 	getAllRockets(false, rocket.setRockets)
 	getAllLaunchPads(false, launchPad.setLaunchPads)
+	getUpcomingLaunches(false, upcomingLaunch.setUpcomingLaunches)
 	sidebar.setToggle(false)
 }
 
