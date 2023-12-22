@@ -1,23 +1,20 @@
 # Getting Started with SpaceX Launches
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with React and has been deployed to vercel.
+For live demo, click [https://spacexlaunches-demo.vercel.app/](https://spacexlaunches-demo.vercel.app/) to view it in the browser.
 
-## Available Scripts
+## To start project locally
 
-In the project directory, you can run:
+To run the project locally, you must first clone the repository from [https://github.com/rizwan-rizu/spacexlaunches.git](https://github.com/rizwan-rizu/spacexlaunches.git) and run following commands in the `spacexlaunches` directory.
+
+### `npm install`
+
+This command will install all the required packages that are listed in the `package.json` and after when packages gets installed you will be good to run the project.
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
