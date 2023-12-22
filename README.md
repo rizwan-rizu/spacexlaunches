@@ -38,6 +38,8 @@ I've also included links, an image list, and a YouTube video of the launch on th
 
 ![Dashboard layout](/src/assets/images/sidenav-layout.png?raw=true "Optional Title")
 
+![Dashboard layout](/src/assets/images/sidebar-open.png?raw=true "Optional Title")
+
 ### TopNav Layout
 
 ![Topnav layout](/src/assets/images/topnav-layout.png?raw=true "Optional Title")
@@ -48,7 +50,13 @@ I've also included links, an image list, and a YouTube video of the launch on th
 
 ### Grid view of launches
 
-![grid view](/src/assets/images/table-layout.png?raw=true "Optional Title")
+![grid view](/src/assets/images/dashboard1.png.png?raw=true "Optional Title")
+
+### Other
+
+![grid view](/src/assets/images/imagelist.png.png.png?raw=true "Optional Title")
+
+![grid view](/src/assets/images/video.png.png.png?raw=true "Optional Title")
 
 ## Learn More
 
