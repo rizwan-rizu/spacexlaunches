@@ -50,13 +50,13 @@ I've also included links, an image list, and a YouTube video of the launch on th
 
 ### Grid view of launches
 
-![grid view](/src/assets/images/dashboard1.png.png?raw=true "Optional Title")
+![grid view](/src/assets/images/dashboard1.png?raw=true "Optional Title")
 
 ### Other
 
-![grid view](/src/assets/images/imagelist.png.png.png?raw=true "Optional Title")
+![grid view](/src/assets/images/imagelist.png?raw=true "Optional Title")
 
-![grid view](/src/assets/images/video.png.png.png?raw=true "Optional Title")
+![grid view](/src/assets/images/video.png?raw=true "Optional Title")
 
 ## Learn More
 
