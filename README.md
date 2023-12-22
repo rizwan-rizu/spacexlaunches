@@ -24,7 +24,20 @@ npm (Node Package Manager)
 - Mui-system for the styled-components
 - Mui data grid.
 - React-router-dom
-- moment (open source data library)
+- moment (open source date library)
+- axios
+
+## Some implementation being implemented
+-  Implemented re-usable API Service using Axios with Request Interceptor to append authorization header for the Bearer token and Response Interceptor to watch for the API response; if it fails with 401, then 
+ retry the previous API call by getting the refreshed token. That code is commented out because the SpaceX API does not currently require the Bearer token but api service is being used to avoid any code redundancy.
+- By using React Router i have created Protected Routes so that only authorized users can access the route/page based on the user roles. Currently I have commented out some logic in the protected route because of no roles and permissions.
+- Implemented state management using the context api without any external library installation.
+- For the purpose of code reusability, common components were created to be called whenever necessary.
+
+## Things react application should have but not implemented currently due to limited time
+- Error Boundaries for error handling in React to catch JavaScript errors occurring anywhere in their child component tree
+- Unit testing
+- Setting up ESLint for improved code quality
 
 ## Design Choice
 This application was designed and developed to appeal to users who prefer the dashboard layout with navigation on the left as well as those who prefer the Top Nav layout. (screenshots attached below)
@@ -50,13 +63,13 @@ I've also included links, an image list, and a YouTube video of the launch on th
 
 ### Grid view of launches
 
-![grid view](/src/assets/images/dashboard1.png?raw=true "Optional Title")
+![grid view](/src/assets/images/dashboard1.png.png?raw=true "Optional Title")
 
 ### Other
 
-![grid view](/src/assets/images/imagelist.png?raw=true "Optional Title")
+![grid view](/src/assets/images/imagelist.png.png.png?raw=true "Optional Title")
 
-![grid view](/src/assets/images/video.png?raw=true "Optional Title")
+![grid view](/src/assets/images/video.png.png.png?raw=true "Optional Title")
 
 ## Learn More
 
