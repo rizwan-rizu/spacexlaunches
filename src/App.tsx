@@ -14,10 +14,10 @@ import NotFound from './common/notFound';
 import './App.css';
 
 const App = () => {
-  const { rocket, sidebar, launch, launchPad } = useContext(StoreContext)
+  const { rocket, sidebar, launch, launchPad, upcomingLaunch } = useContext(StoreContext)
 
   useEffect(() => {
-    persistStore(rocket, sidebar, launch, launchPad)
+    persistStore(rocket, sidebar, launch, launchPad, upcomingLaunch)
   }, [])
 
   return (

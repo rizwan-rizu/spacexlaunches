@@ -40,12 +40,13 @@ const Sidebar = () => {
 
 const SideNav = styled(Box)<{ toggle: boolean }>(({ toggle }) => ({
   position: "fixed",
+  overflow: "hidden",
   top: 0,
   left: 0,
   bottom: 0,
   boxShadow: `3px 0 6px -3px ${pallete.black}`,
   borderRadius: "0px 40px 13px 0px",
-  zIndex: 1,
+  zIndex: 2,
   backgroundColor: pallete.primary,
 
   "& .inner": {
@@ -79,7 +80,7 @@ const SideNav = styled(Box)<{ toggle: boolean }>(({ toggle }) => ({
   },
 }));
 
-const renderListItem = (item: iListItemProps, navigate: any) => (
+export const renderListItem = (item: iListItemProps, navigate: any): any => (
   <ListItem key={item.name} className="list-item" onClick={() => item.to && navigate(item.to)} disablePadding>
     <ListItemButton selected={window.location.pathname === item.to || (window.location.pathname.includes(item.routeInitial) && (item.routeInitial !== "" || window.location.pathname.includes('launch/')))}>
       <>
