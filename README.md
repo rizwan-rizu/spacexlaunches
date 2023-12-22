@@ -1,43 +1,54 @@
 # Getting Started with SpaceX Launches
+Welcome to the documentation for the SpaceX Launches application. This document provides an overview of the application, its features, and guidelines on how to set it up locally and use it.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with React and has been deployed to vercel.
+For live demo, click [https://spacexlaunches-demo.vercel.app/](https://spacexlaunches-demo.vercel.app/) to view it in the browser.
 
-## Available Scripts
+## Getting Started
+### Prerequisites
+Before you begin, ensure you have the following installed:
 
-In the project directory, you can run:
+Node.js &
+npm (Node Package Manager)
 
-### `npm start`
+## Installation
+- Clone the repository: `git clone https://github.com/rizwan-rizu/spacexlaunches.git`
+- Navigate to the project folder: `cd spacexlaunches`
+- Install dependencies: `npm install`
+- Run the the appliation locally: `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technology Used
+- Typescript
+- React
+- Material-UI (MUI)
+- Mui-system for the styled-components
+- Mui data grid.
+- React-router-dom
+- moment (open source data library)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Design Choice
+This application was designed and developed to appeal to users who prefer the dashboard layout with navigation on the left as well as those who prefer the Top Nav layout. (screenshots attached below)
 
-### `npm test`
+We list all of the previous and upcoming launches on the main page/default route. In that view, too, I've given the user the option to choose between the cards and the data grid view, depending on their preference. (screenshots attached below)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I've also included links, an image list, and a YouTube video of the launch on the detail page of the rocket, launch pad, and launch.
 
-### `npm run build`
+## Screenshots
+### Dashboard Layout
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Dashboard layout](/src/assets/images/sidenav-layout.png?raw=true "Optional Title")
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### TopNav Layout
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Topnav layout](/src/assets/images/topnav-layout.png?raw=true "Optional Title")
 
-### `npm run eject`
+### Card view of launches
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![card view](/src/assets/images/cards-layout.png?raw=true "Optional Title")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Grid view of launches
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![grid view](/src/assets/images/table-layout.png?raw=true "Optional Title")
 
 ## Learn More
 
