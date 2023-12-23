@@ -33,6 +33,7 @@ npm (Node Package Manager)
 - By using React Router i have created Protected Routes so that only authorized users can access the route/page based on the user roles. Currently I have commented out some logic in the protected route because of no roles and permissions.
 - Implemented state management using the context api without any external library installation.
 - For the purpose of code reusability, common components were created to be called whenever necessary.
+- Implemented resoponsiveness so that the site appears well on smaller screens
 
 ## Things application should have but not implemented currently due to limited time
 - Error Boundaries for error handling in React to catch JavaScript errors occurring anywhere in their child component tree
